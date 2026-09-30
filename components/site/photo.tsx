@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { asset } from '@/lib/asset';
 import { cn } from '@/lib/utils';
 
 interface PhotoProps {
@@ -23,7 +24,7 @@ export function Photo({ src, alt, className, imgClassName, priority, sizes, tone
         return (
             <div className={cn('relative overflow-hidden', className)}>
                 <Image
-                    src={src}
+                    src={asset(src)}
                     alt={alt}
                     fill
                     priority={priority}
